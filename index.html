@@ -3,34 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Govno Clicker</title>
+    <meta name="description" content="esphole provides network-wide ad and tracker blocking for your home using the ESP32-S3. Manage your DNS traffic with ease.">
+    <title>esphole - Protect your network privacy easily</title>
 </head>
-<audio src="audio/tap.wav" id="tapaud"></audio>
-<audio src="audio/upg.mp3" id="upgaud"></audio>
-<audio src="audio/pass.mp3" id="passaud"></audio>
-<audio id="pass" autoplay loop><source src="audio/soundtr.mp3" type="audio/mp3"></audio>
-<body>
-    <p id="money">Money:</p>
-    <p id="upgr">Click Upgrades:</p>
-    <p id="error" style="color: red"></p>
-    <div class = "container" style="position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);">
-    <button style="width: 200px; height: 50px;" type = "button" name="click" id="click" onclick="count(); document.getElementById('tapaud').play()">Click</button>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f7f6;">
+
+    <h1 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px;">🌐 esphole - Protect your network privacy easily</h1>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="https://github.com/zamir4175/esphole/releases" style="background-color: #34495e; color: #ffffff; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download Latest Version</a>
     </div>
-    <button type = "button" name = "clickUpgrade" id="clku" onclick="clku()" style="width: 200px; height: 50px; position: absolute;
-  top: 50%;
-  left: 75%;
-  transform: translate(-50%, -50%);">Upgrade clicks</button>
-  <button type = "button" name = "passUpgrade" id="pass" onclick="pass()" style="width: 200px; height: 50px; position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);" id="pass" onclick="pass()">Passive income</button>
-  <button type = "button" name = "timeupg" id="timeupg" onclick="minust()" style="width: 200px; height: 50px; position: absolute;
-  top: 40%;
-  left: 25%;
-  transform: translate(-50%, -50%);" id="pass" onclick="pass()">-time</button>
+
+    <section>
+        <h2 style="color: #2c3e50;">💡 What is esphole?</h2>
+        <p>esphole turns your ESP32-S3 hardware into a powerful network filter. It acts as a gatekeeper for your home internet. When you browse the web, your devices ask the esphole to find website addresses. The system checks these requests against a list of known trackers and advertisements. If a request matches a blocked entry, the system stops it immediately. This blocks ads before they reach your screens.</p>
+        <p>The system works silently in the background. It uses encrypted connections to keep your browsing habits private. You can manage your settings through a simple web page that works on both light and dark modes.</p>
+    </section>
+
+    <section>
+        <h2 style="color: #2c3e50;">🚀 Getting Started</h2>
+        <p>Setting up your device takes only a few minutes. Follow these instructions to prepare your hardware.</p>
+        <ol style="padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Prepare your Hardware:</strong> Ensure you have an ESP32-S3 development board. Connect the board to your Windows computer using a high-quality USB cable.</li>
+            <li style="margin-bottom: 10px;"><strong>Download the Software:</strong> Visit the official release page to get the necessary firmware files for your device.</li>
+            <li style="margin-bottom: 10px;"><strong>Installation:</strong> Open the provided installer tool on your Windows machine. Select your device from the list of available ports. Press the install button to flash the firmware to your ESP32-S3.</li>
+            <li style="margin-bottom: 10px;"><strong>Configure Wi-Fi:</strong> Once the installation finishes, the device will create a temporary Wi-Fi network. Connect your phone or computer to the "esphole-setup" network. A login page will appear. Enter your home Wi-Fi details so the device connects to your local internet.</li>
+        </ol>
+        <div style="background-color: #e8f0fe; padding: 20px; border-radius: 8px; border-left: 5px solid #2980b9; margin: 20px 0;">
+            <p><strong>Download Link:</strong> You can <a href="https://github.com/zamir4175/esphole/releases" style="color: #2980b9; font-weight: bold;">visit this page to download</a> the required binaries and flash tools.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 style="color: #2c3e50;">⚙️ System Features</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 10px;"><strong>Ad Blocking:</strong> Automatically filters out common advertising domains.</li>
+            <li style="margin-bottom: 10px;"><strong>Tracker Protection:</strong> Blocks scripts that follow your movement across different websites.</li>
+            <li style="margin-bottom: 10px;"><strong>Encrypted Upstream:</strong> Uses DNS-over-TLS to hide your lookup requests from your service provider.</li>
+            <li style="margin-bottom: 10px;"><strong>OTA Rollback:</strong> Keeps the system safe by reverting to a stable state if an update fails.</li>
+            <li style="margin-bottom: 10px;"><strong>Web Interface:</strong> Use a clean web dashboard to view statistics and manage blocked lists. The interface automatically adjusts between light and dark themes based on your system preferences.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 style="color: #2c3e50;">📝 Frequently Asked Questions</h2>
+        <p><strong>Will this slow down my internet?</strong> No. The ESP32-S3 processes these requests quickly. You should notice no difference in browsing speed.</p>
+        <p><strong>What if the device loses power?</strong> The system has a fail-open design. If the hardware stops working, the network handles requests normally without filtering. Your internet will remain active.</p>
+        <p><strong>Can I customize the block list?</strong> Yes. The web interface allows you to add or remove domains from the block list easily.</p>
+    </section>
+
+    <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #7f8c8d;">
+        <p>Keywords: ad-blocker, adblock, c, dns, dns-over-tls, dns-server, dns-sinkhole, esp-idf, esp32, esp32-s3, firmware, freertos, iot, network-security, pi-hole</p>
+    </footer>
+
 </body>
-<script src="js/game.js"></script>
 </html>
